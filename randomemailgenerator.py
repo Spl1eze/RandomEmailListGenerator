@@ -25,7 +25,12 @@ for item in txt_file_data:
 while True:
     try:
         num_of_emails = int(input("Enter the number of random emails you want: \n"))
-        break
+        if num_of_emails > len(emails):
+            print("That number was too large")
+        elif num_of_emails < 0:
+            print("No negatives")
+        else:
+            break
     except:
         print("That wasn't a valid number")
 
